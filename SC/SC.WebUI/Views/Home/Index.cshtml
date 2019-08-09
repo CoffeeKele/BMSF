@@ -1,0 +1,189 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="scApp">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>后台管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="/Content/CloudAdmin/css/cloud-admin.css">
+    <link rel="stylesheet" type="text/css" href="/Content/CloudAdmin/css/themes/default.css" id="skin-switcher">
+    <link href="/Content/CloudAdmin/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/Index/css")
+    <link href="~/Content/fullcalendar-2.9.1/fullcalendar.print.css" rel='stylesheet' media='print' />
+    <!-- uploadify -->
+    <link href="/Content/uploadify/uploadify.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar clearfix" id="header">
+        <div class="container" ng-controller="msgListCtrl">
+            <div class="navbar-brand">
+                <!-- COMPANY LOGO -->
+                <a href="#">
+                    <img src="" alt="" class="img-responsive" height="30" width="120">
+                </a>
+                <!-- /COMPANY LOGO -->
+                <!-- TEAM STATUS FOR MOBILE -->
+                <div class="visible-xs">
+                    <a href="#" class="team-status-toggle switcher btn dropdown-toggle">
+                        <i class="fa fa-users"></i>
+                    </a>
+                </div>
+                <!-- /TEAM STATUS FOR MOBILE -->
+                <!-- SIDEBAR COLLAPSE -->
+                <div id="sidebar-collapse" class="sidebar-collapse btn">
+                    <i class="fa fa-bars"
+                       data-icon1="fa fa-bars"
+                       data-icon2="fa fa-bars"></i>
+                </div>
+                <!-- /SIDEBAR COLLAPSE -->
+            </div>
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown" id="header-tasks">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge">@ViewBag.Notifications.Count</span>
+                    </a>
+                    <ul class="dropdown-menu tasks">
+                        <li class="dropdown-title">
+                            <span><i class="fa fa-bell"></i>@ViewBag.Notifications.Count 提醒</span>
+                        </li>
+                        @foreach (var notification in ViewBag.Notifications)
+                        {
+                            <li>
+                                <a href="@notification.Url">
+                                <span class="label label-@notification.InfoLevel"><i class="fa fa-comment"></i></span>
+                                <span class="body">
+                                    <span class="message">@notification.Content</span>
+                                    <span class="time">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>@notification.TimeRange</span>
+                                    </span>
+                                </span>
+                                </a>
+                            </li>
+                        }  
+                        <li class="footer">
+                            <a href="#">查看所有提醒<i class="fa fa-arrow-circle-right"></i></a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END TODO DROPDOWN -->
+
+
+
+                <li class="dropdown user" id="header-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img alt="" src="/Images/@ViewBag.User.ImgUrl" />
+                        <span class="username">@ViewBag.User.UserName</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" ng-click="changeAccount(@ViewBag.User.UserID)"><i class="fa fa-user"></i> 我的个人资料</a></li>
+
+                        <li><a href="#" ng-click="changePass()"><i class="fa fa-eye"></i> 修改密码</a></li>
+                        <li><a href="#" ng-click="logout()"><i class="fa fa-power-off"></i> 退出</a></li>
+                    </ul>
+                </li>
+                @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-cog"></i>
+                            <span class="name">Skins</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu skins">
+                            <li class="dropdown-title">
+                                <span><i class="fa fa-leaf"></i> Theme Skins</span>
+                            </li>
+                            <li><a href="#" data-skin="default">Subtle (default)</a></li>
+                            <li><a href="#" data-skin="night">Night</a></li>
+                            <li><a href="#" data-skin="earth">Earth</a></li>
+                            <li><a href="#" data-skin="utopia">Utopia</a></li>
+                            <li><a href="#" data-skin="nature">Nature</a></li>
+                            <li><a href="#" data-skin="graphite">Graphite</a></li>
+                        </ul>
+                    </li>*@
+                <!-- END USER LOGIN DROPDOWN -->
+            </ul>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+    </header>
+    <!-- PAGE -->
+    <section id="page">
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="sidebar" ng-controller="menuCtrl">
+            <div class="sidebar-menu nav-collapse">
+
+                <!-- SEARCH BAR -->
+                <!-- /SEARCH BAR -->
+                <!-- SIDEBAR MENU -->
+
+
+                <ul>
+                    <li ng-class="{true: 'has-sub open', false: 'has-sub'}[active(menu)]" ng-repeat="menu in menus | filter:{SuperModuleId:'00'}:true">
+                        <a href="javascript:;" class="" ng-click="menuClick($event)">
+                            <i class="fa  fa-fw"><img ng-src="{{menu.Icon}}" /></i>  <span ng-class="{true: 'menu-text', false: 'sub-menu-text'}" ng-bind="menu.ModuleName"></span>
+                            <span ng-class="{true: 'arrow open', false: 'arrow'}"></span>
+                        </a>
+                        <ul class="sub" ng-style="{true:displayblock, false:displaynone}[active(menu)]">
+                            <li ng-class="{true: 'active', false: ''}[active(subMenu)]" ng-repeat="subMenu in menus | filter:{SuperModuleId:menu.ModuleId}:true">
+                                <a class="" href="javascript:;" ng-click="subMenuClick($event,subMenu.Url,subMenu.Target)"><span class="sub-menu-text">{{subMenu.ModuleName}}</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /SIDEBAR MENU -->
+            </div>
+        </div>
+        <!-- /SIDEBAR -->
+
+        <div id="main-content">
+            <div class="container" ui-view>
+            </div>
+        </div>
+
+    </section>
+
+    @Scripts.Render("~/Content/Index/js")
+    <!-- DATE PICKER -->
+    <script src="/Content/laydate/laydate.js"></script>
+    <!-- uploadify -->
+    <script src="/Content/uploadify/jquery.uploadify.min.js"></script>
+    <!-- CUSTOM SCRIPT -->
+    <script src="/Content/CloudAdmin/js/script.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            //$.ajax({
+            //    type: "GET",
+            //    url: "/api/module",
+            //    data: "roleId=0aca6362c5",
+            //    success: function (data) {
+
+            //    }
+
+            //});
+            //App.setPage("index");  //Set current page
+            App.init(); //Initialise plugins and elements
+        });
+
+
+    </script>
+    <!-- /JAVASCRIPTS -->
+    @Scripts.Render("~/Scripts/angular")
+    @Scripts.Render("~/Scripts/AppCommon")
+    @Scripts.Render("~/Scripts/App")
+    <script type="text/javascript">
+        //FileAPI = { jsUrl: '/Content/angular-file-upload/FileAPI.min.js', flashUrl: '/Content/angular-file-upload/FileAPI.flash.swf' };
+    </script>
+    <link href="~/Content/bootstrap-dialog/bootstrap-dialog.min.css" rel="stylesheet" />
+    <script src="~/Content/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+</body>
+</html>
+

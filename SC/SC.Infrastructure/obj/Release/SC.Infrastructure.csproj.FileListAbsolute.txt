@@ -1,0 +1,11 @@
+D:\Projects\SC\SC.Infrastructure\bin\Release\SC.Infrastructure.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\SC.Infrastructure.pdb
+D:\Projects\SC\SC.Infrastructure\bin\Release\AutoMapper.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\KM.Common.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\Newtonsoft.Json.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\Microsoft.Practices.Unity.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\log4net.dll
+D:\Projects\SC\SC.Infrastructure\bin\Release\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\SC\SC.Infrastructure\obj\Release\SC.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.Infrastructure\obj\Release\SC.Infrastructure.dll
+D:\Projects\SC\SC.Infrastructure\obj\Release\SC.Infrastructure.pdb

@@ -1,0 +1,33 @@
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\AutoMapper.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\KM.Common.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\log4net.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.dll
+c:\users\administrator\documents\visual studio 2013\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.pdb
+D:\Projects\SC\SC.Infrastructure\bin\Debug\AutoMapper.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\KM.Common.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\log4net.dll
+D:\Projects\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.dll
+D:\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.pdb
+D:\Projects\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\SC.Infrastructure.pdb
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\AutoMapper.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\KM.Common.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\log4net.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.dll
+E:\BS框架项目\项目1\SC\SC.Infrastructure\obj\Debug\SC.Infrastructure.pdb

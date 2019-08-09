@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Batman.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Batman.Core.BatComputer">
+            <summary>
+            Generally controls the basic flow of the application during certain phases
+            </summary>
+        </member>
+        <member name="F:Batman.Core.BatComputer.Bootstrapper">
+            <summary>
+            Bootstrapper that the application holds onto
+            </summary>
+        </member>
+        <member name="M:Batman.Core.BatComputer.PreStart">
+            <summary>
+            Called at the start of the application
+            </summary>
+        </member>
+        <member name="M:Batman.Core.BatComputer.PostStart">
+            <summary>
+            Called after the application has been initiated
+            </summary>
+        </member>
+        <member name="M:Batman.Core.BatComputer.End">
+            <summary>
+            Called at the end of the application
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1">
+            <summary>
+            Bootstrapper base class
+            </summary>
+            <typeparam name="Container">The actual IoC object</typeparam>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.AppContainer">
+            <summary>
+            The IoC container
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Name">
+            <summary>
+            Name of the bootstrapper
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1(``0)">
+            <summary>
+            Registers an object with the bootstrapper
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to register</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1">
+            <summary>
+            Registers a type with the default constructor
+            </summary>
+            <typeparam name="T">Object type to register</typeparam>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``2">
+            <summary>
+            Registers a type with the default constructor of a child class
+            </summary>
+            <typeparam name="T1">Base class/interface type</typeparam>
+            <typeparam name="T2">Child class type</typeparam>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1(System.Func{``0})">
+            <summary>
+            Registers a type with a function
+            </summary>
+            <typeparam name="T">Type that the function returns</typeparam>
+            <param name="Function">Function to register with the type</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Resolve``1(``0)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1(``0,System.String)">
+            <summary>
+            Registers an object with the bootstrapper
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to register</param>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1(System.String)">
+            <summary>
+            Registers a type with the default constructor
+            </summary>
+            <typeparam name="T">Object type to register</typeparam>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``2(System.String)">
+            <summary>
+            Registers a type with the default constructor of a child class
+            </summary>
+            <typeparam name="T1">Base class/interface type</typeparam>
+            <typeparam name="T2">Child class type</typeparam>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Register``1(System.Func{``0},System.String)">
+            <summary>
+            Registers a type with a function
+            </summary>
+            <typeparam name="T">Type that the function returns</typeparam>
+            <param name="Name">Name associated with the object</param>
+            <param name="Function">Function to register with the type</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Resolve``1(System.String,``0)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <param name="Name">Name associated with the object</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Resolve(System.Type,System.Object)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Resolve(System.Type,System.String,System.Object)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <param name="Name">Name associated with the object</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.ResolveAll``1">
+            <summary>
+            Resolves the objects based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <returns>A list of objects of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.ResolveAll(System.Type)">
+            <summary>
+            Resolves all objects based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <returns>A list of objects of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Dispose">
+            <summary>
+            Disposes of the object
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the object
+            </summary>
+            <param name="Managed">Determines if all objects should be disposed or just managed objects</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.BaseClasses.BootstrapperBase`1.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Bootstrapper.Interfaces.IBootstrapper">
+            <summary>
+            Bootstrapper interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Name">
+            <summary>
+            Name of the bootstrapper
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1(``0)">
+            <summary>
+            Registers an object with the bootstrapper
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to register</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1">
+            <summary>
+            Registers a type with the default constructor
+            </summary>
+            <typeparam name="T">Object type to register</typeparam>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``2">
+            <summary>
+            Registers a type with the default constructor of a child class
+            </summary>
+            <typeparam name="T1">Base class/interface type</typeparam>
+            <typeparam name="T2">Child class type</typeparam>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1(System.Func{``0})">
+            <summary>
+            Registers a type with a function
+            </summary>
+            <typeparam name="T">Type that the function returns</typeparam>
+            <param name="Function">Function to register with the type</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1(``0,System.String)">
+            <summary>
+            Registers an object with the bootstrapper
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to register</param>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1(System.String)">
+            <summary>
+            Registers a type with the default constructor
+            </summary>
+            <typeparam name="T">Object type to register</typeparam>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``2(System.String)">
+            <summary>
+            Registers a type with the default constructor of a child class
+            </summary>
+            <typeparam name="T1">Base class/interface type</typeparam>
+            <typeparam name="T2">Child class type</typeparam>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Register``1(System.Func{``0},System.String)">
+            <summary>
+            Registers a type with a function
+            </summary>
+            <typeparam name="T">Type that the function returns</typeparam>
+            <param name="Function">Function to register with the type</param>
+            <param name="Name">Name associated with the object</param>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Resolve``1(``0)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Resolve``1(System.String,``0)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <param name="Name">Name associated with the object</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Resolve(System.Type,System.Object)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.Resolve(System.Type,System.String,System.Object)">
+            <summary>
+            Resolves the object based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <param name="Name">Name associated with the object</param>
+            <param name="DefaultObject">Default object to return if the type can not be resolved</param>
+            <returns>An object of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.ResolveAll``1">
+            <summary>
+            Resolves the objects based on the type specified
+            </summary>
+            <typeparam name="T">Type to resolve</typeparam>
+            <returns>A list of objects of the specified type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IBootstrapper.ResolveAll(System.Type)">
+            <summary>
+            Resolves all objects based on the type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <returns>A list of objects of the specified type</returns>
+        </member>
+        <member name="T:Batman.Core.Bootstrapper.Interfaces.IModule">
+            <summary>
+            IoC module base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Interfaces.IModule.Load(Batman.Core.Bootstrapper.Interfaces.IBootstrapper)">
+            <summary>
+            Loads the module using the bootstrapper
+            </summary>
+            <param name="Bootstrapper">Bootstrapper used to register various objects</param>
+        </member>
+        <member name="T:Batman.Core.Bootstrapper.Modules.ManagersModule">
+            <summary>
+            Module for registering various object/class managers
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.Modules.ManagersModule.Load(Batman.Core.Bootstrapper.Interfaces.IBootstrapper)">
+            <summary>
+            Loads the module using the bootstrapper
+            </summary>
+            <param name="Bootstrapper">Bootstrapper used to register various objects</param>
+        </member>
+        <member name="T:Batman.Core.Communication.BaseClasses.CommunicatorBase">
+            <summary>
+            Communicator base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.CommunicatorBase.Formatters">
+            <summary>
+            Formatters
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.CommunicatorBase.MessageType">
+            <summary>
+            Message type used by the communicator
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.CommunicatorBase.Name">
+            <summary>
+            Name of the communicator
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.CreateMessage">
+            <summary>
+            Creates a message
+            </summary>
+            <returns>Message object</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.Initialize(System.Collections.Generic.IEnumerable{Batman.Core.Communication.Interfaces.IFormatter})">
+            <summary>
+            Initializes the communicator
+            </summary>
+            <param name="Formatters">Formatters to use</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.Send``1(Batman.Core.Communication.Interfaces.IMessage,System.String,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.Send``1(Batman.Core.Communication.Interfaces.IMessage,Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.SendAsync``1(Batman.Core.Communication.Interfaces.IMessage,System.String,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.SendAsync``1(Batman.Core.Communication.Interfaces.IMessage,Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.CommunicatorBase.InternalSend(Batman.Core.Communication.Interfaces.IMessage)">
+            <summary>
+            Sends a message
+            </summary>
+            <param name="message">Message to send</param>
+        </member>
+        <member name="T:Batman.Core.Communication.BaseClasses.MessageBase">
+            <summary>
+            Message base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.MessageBase.#ctor(Batman.Core.Communication.Interfaces.ICommunicator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Communicator">Communicator used to create the message</param>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.MessageBase.Communicator">
+            <summary>
+            Communicator used for sending the message
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.MessageBase.To">
+            <summary>
+            Whom the message is to
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.MessageBase.Subject">
+            <summary>
+            The subject of the Communicator
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.MessageBase.From">
+            <summary>
+            Whom the message is from
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.BaseClasses.MessageBase.Body">
+            <summary>
+            Body of the text
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.MessageBase.Send``1(System.String,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.MessageBase.SendAsync``1(System.String,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.MessageBase.Send``1(Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.BaseClasses.MessageBase.SendAsync``1(Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="T:Batman.Core.Communication.CommunicationManager">
+            <summary>
+            Communication manager (Email, SMS, Twitter, etc.)
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.CommunicationManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.CommunicationManager.Communicators">
+            <summary>
+            Communicators
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.CommunicationManager.Formatters">
+            <summary>
+            Formatters
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.CommunicationManager.Item(System.Type)">
+            <summary>
+            Gets the communicator by its message type
+            </summary>
+            <param name="MessageType">Message type</param>
+            <returns>The communicator based on its message type</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.CommunicationManager.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Batman.Core.Communication.Interfaces.ICommunicator">
+            <summary>
+            Communicator interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.ICommunicator.Name">
+            <summary>
+            Name of the communicator
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.ICommunicator.MessageType">
+            <summary>
+            Message type used by the communicator
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.ICommunicator.Send``1(Batman.Core.Communication.Interfaces.IMessage,System.String,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.ICommunicator.SendAsync``1(Batman.Core.Communication.Interfaces.IMessage,System.String,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.ICommunicator.Send``1(Batman.Core.Communication.Interfaces.IMessage,Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.ICommunicator.SendAsync``1(Batman.Core.Communication.Interfaces.IMessage,Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <param name="Message">Message to send</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.ICommunicator.CreateMessage">
+            <summary>
+            Creates a message
+            </summary>
+            <returns>Message object</returns>
+        </member>
+        <member name="T:Batman.Core.Communication.Interfaces.IFormatter">
+            <summary>
+            Formatter interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.IFormatter.Name">
+            <summary>
+            Name of the formatter
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IFormatter.Format``1(Batman.Core.Communication.Interfaces.IMessage,System.String,``0)">
+            <summary>
+            Formats the message
+            </summary>
+            <param name="Template">Template to use</param>
+            <param name="Message">Message to format</param>
+            <param name="Model">Model object used to format the message</param>
+            <returns>The formatted message</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IFormatter.Format``1(Batman.Core.Communication.Interfaces.IMessage,Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Formats the message
+            </summary>
+            <param name="Template">Template to use</param>
+            <param name="Message">Message to format</param>
+            <param name="Model">Model object used to format the message</param>
+            <returns>The formatted message</returns>
+        </member>
+        <member name="T:Batman.Core.Communication.Interfaces.IMessage">
+            <summary>
+            Message interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.IMessage.To">
+            <summary>
+            Whom the message is to
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.IMessage.Subject">
+            <summary>
+            The subject of the Communicator
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.IMessage.From">
+            <summary>
+            Whom the message is from
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Communication.Interfaces.IMessage.Body">
+            <summary>
+            Body of the text
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IMessage.Send``1(System.String,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IMessage.SendAsync``1(System.String,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IMessage.Send``1(Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Communication.Interfaces.IMessage.SendAsync``1(Batman.Core.FileSystem.Interfaces.IFile,``0)">
+            <summary>
+            Sends a message asynchronously
+            </summary>
+            <typeparam name="T">Model type</typeparam>
+            <param name="Template">Template text to use</param>
+            <param name="Model">Model object</param>
+            <returns>this</returns>
+        </member>
+        <member name="T:Batman.Core.FileSystem.Interfaces.IDirectory">
+            <summary>
+            Represents a directory
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Accessed">
+            <summary>
+            Last time it was accessed
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Created">
+            <summary>
+            When it was created
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Modified">
+            <summary>
+            When it was last modified
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Exists">
+            <summary>
+            Does the directory exist
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.FullName">
+            <summary>
+            Full path to the directory
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Name">
+            <summary>
+            Name of the directory
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Parent">
+            <summary>
+            Parent directory
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Root">
+            <summary>
+            Root directory
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IDirectory.Size">
+            <summary>
+            Size of the contents of the directory in bytes
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.Create">
+            <summary>
+            Creates the directory if it does not currently exist
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.Delete">
+            <summary>
+            Deletes the directory
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.EnumerateDirectories(System.String,System.IO.SearchOption)">
+            <summary>
+            Enumerates sub directories (defaults to top level sub directories)
+            </summary>
+            <param name="SearchPattern">Search pattern to use</param>
+            <param name="Options">Search options to use</param>
+            <returns>The list of directories</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.EnumerateFiles(System.Collections.Generic.IEnumerable{System.String},System.IO.SearchOption)">
+            <summary>
+            Enumerates files within the directory (defaults to top level directory and not the sub directories)
+            </summary>
+            <param name="SearchPattern">Search pattern to use</param>
+            <param name="Options">Search options to use</param>
+            <returns>The list of files</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.MoveTo(Batman.Core.FileSystem.Interfaces.IDirectory)">
+            <summary>
+            Moves the directory to the specified parent directory
+            </summary>
+            <param name="Directory">Directory to move to</param>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IDirectory.Rename(System.String)">
+            <summary>
+            Renames the directory
+            </summary>
+            <param name="Name">The new name of the directory</param>
+        </member>
+        <member name="T:Batman.Core.FileSystem.Interfaces.IFile">
+            <summary>
+            Represents an individual file
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Accessed">
+            <summary>
+            Last time the file was accessed
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Created">
+            <summary>
+            When the file was created
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Modified">
+            <summary>
+            When the file was last modified
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Directory">
+            <summary>
+            Directory the file is in
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Exists">
+            <summary>
+            Does the file exist currently
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Extension">
+            <summary>
+            File extension
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.FullName">
+            <summary>
+            Full path to the file
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Length">
+            <summary>
+            Size of the file in bytes
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFile.Name">
+            <summary>
+            File name
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.Delete">
+            <summary>
+            Deletes the file
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.Read">
+            <summary>
+            Reads the file to the end as a string
+            </summary>
+            <returns>A string containing the contents of the file</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.ReadBinary">
+            <summary>
+            Reads the file to the end as a byte array
+            </summary>
+            <returns>A byte array containing the contents of the file</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.Rename(System.String)">
+            <summary>
+            Renames the file
+            </summary>
+            <param name="NewName">New file name</param>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.MoveTo(Batman.Core.FileSystem.Interfaces.IDirectory)">
+            <summary>
+            Moves the file to another directory
+            </summary>
+            <param name="Directory">Directory to move the file to</param>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.Write(System.String,System.IO.FileMode,System.Text.Encoding)">
+            <summary>
+            Writes content to the file
+            </summary>
+            <param name="Content">Content to write</param>
+            <param name="Mode">File mode</param>
+            <param name="Encoding">Encoding that the content should be saved as (default is UTF8)</param>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFile.Write(System.Byte[],System.IO.FileMode)">
+            <summary>
+            Writes content to the file
+            </summary>
+            <param name="Content">Content to write</param>
+            <param name="Mode">File mode</param>
+        </member>
+        <member name="T:Batman.Core.FileSystem.Interfaces.IFileSystem">
+            <summary>
+            Interface for the file system
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.Interfaces.IFileSystem.Name">
+            <summary>
+            Name of the file system
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFileSystem.File(System.String)">
+            <summary>
+            Gets the class representation for the file
+            </summary>
+            <param name="Path">Path to the file</param>
+            <returns>The file object</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFileSystem.Directory(System.String)">
+            <summary>
+            Gets the directory representation for the directory
+            </summary>
+            <param name="Path">Path to the directory</param>
+            <returns>The directory object</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.Interfaces.IFileSystem.CanHandle(System.String)">
+            <summary>
+            Returns true if it can handle the path, false otherwise
+            </summary>
+            <param name="Path">The path to check against</param>
+            <returns>True if it can handle the path, false otherwise</returns>
+        </member>
+        <member name="T:Batman.Core.FileSystem.FileManager">
+            <summary>
+            File system manager
+            </summary>
+        </member>
+        <member name="M:Batman.Core.FileSystem.FileManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.FileManager.FileSystems">
+            <summary>
+            File systems
+            </summary>
+        </member>
+        <member name="P:Batman.Core.FileSystem.FileManager.Item(System.String)">
+            <summary>
+            Gets the file system by name
+            </summary>
+            <param name="Name">Name of the file system</param>
+            <returns>The file system specified</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.FileManager.File(System.String)">
+            <summary>
+            Gets the class representation for the file
+            </summary>
+            <param name="Path">Path to the file</param>
+            <returns>The file object</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.FileManager.Directory(System.String)">
+            <summary>
+            Gets the directory representation for the directory
+            </summary>
+            <param name="Path">Path to the directory</param>
+            <returns>The directory object</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.FileManager.FindSystem(System.String)">
+            <summary>
+            Finds a file system compatible with the path
+            </summary>
+            <param name="Path">Path to search for</param>
+            <returns>The file system associated with the path</returns>
+        </member>
+        <member name="M:Batman.Core.FileSystem.FileManager.ToString">
+            <summary>
+            Outputs the file system information in string format
+            </summary>
+            <returns>The list of file systems that are available</returns>
+        </member>
+        <member name="T:Batman.Core.Logging.BaseClasses.LogBase">
+            <summary>
+            Logging base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Logging.BaseClasses.LogBase.#ctor(System.Action{Batman.Core.Logging.BaseClasses.LogBase})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Start">Called when the log is started</param>
+        </member>
+        <member name="T:Batman.Core.Logging.NullLogger">
+            <summary>
+            Null logger (if one isn't found)
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Logging.NullLogger.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Batman.Core.Logging.NullLogger"/> class.
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Profiling.BaseClasses.ProfilerBase">
+            <summary>
+            Profiler base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Step(System.String)">
+            <summary>
+            Creates a new profiler that is a sub section of the current profiler
+            </summary>
+            <param name="Name">Name associated with the step</param>
+            <returns>A new profiler</returns>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Start">
+            <summary>
+            Starts the profiler
+            </summary>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Stop(System.Boolean)">
+            <summary>
+            Stops the profiler
+            </summary>
+            <param name="DiscardResults">Should the results be discarded?</param>
+            <returns>this</returns>
+        </member>
+        <member name="P:Batman.Core.Profiling.BaseClasses.ProfilerBase.Name">
+            <summary>
+            Name of the profiler
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Dispose">
+            <summary>
+            Disposes of the object
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the object
+            </summary>
+            <param name="Managed">Determines if all objects should be disposed or just managed objects</param>
+        </member>
+        <member name="M:Batman.Core.Profiling.BaseClasses.ProfilerBase.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Profiling.Interfaces.IProfiler">
+            <summary>
+            Profiler interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Profiling.Interfaces.IProfiler.Name">
+            <summary>
+            Name of the profiler
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Profiling.Interfaces.IProfiler.Step(System.String)">
+            <summary>
+            Creates a new profiler that is a sub section of the current profiler
+            </summary>
+            <returns>A new profiler</returns>
+        </member>
+        <member name="M:Batman.Core.Profiling.Interfaces.IProfiler.Start">
+            <summary>
+            Starts the profiler
+            </summary>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.Core.Profiling.Interfaces.IProfiler.Stop(System.Boolean)">
+            <summary>
+            Stops the profiler
+            </summary>
+            <param name="DiscardResults">Should the results be discarded?</param>
+            <returns>this</returns>
+        </member>
+        <member name="T:Batman.Core.Tasks.Enums.RunTime">
+            <summary>
+            Run time for the task
+            </summary>
+        </member>
+        <member name="F:Batman.Core.Tasks.Enums.RunTime.PreStart">
+            <summary>
+            Before start is called
+            </summary>
+        </member>
+        <member name="F:Batman.Core.Tasks.Enums.RunTime.PostStart">
+            <summary>
+            After start is called
+            </summary>
+        </member>
+        <member name="F:Batman.Core.Tasks.Enums.RunTime.End">
+            <summary>
+            When the application is ending
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Tasks.Interfaces.ITask">
+            <summary>
+            Task interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Tasks.Interfaces.ITask.TimeToRun">
+            <summary>
+            Time that the task should be run
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Tasks.Interfaces.ITask.Name">
+            <summary>
+            Name of the task
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Tasks.Interfaces.ITask.Run">
+            <summary>
+            Runs the task
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Tasks.TaskManager">
+            <summary>
+            Task manager
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Tasks.TaskManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Tasks.TaskManager.Tasks">
+            <summary>
+            Tasks to run
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Tasks.TaskManager.Run(Batman.Core.Tasks.Enums.RunTime)">
+            <summary>
+            Runs the tasks associated with the run time specified
+            </summary>
+            <param name="TimeToRun">Time to run</param>
+        </member>
+        <member name="M:Batman.Core.Tasks.TaskManager.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+    </members>
+</doc>

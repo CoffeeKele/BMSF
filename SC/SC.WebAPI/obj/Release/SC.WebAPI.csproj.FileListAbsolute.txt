@@ -1,0 +1,14 @@
+D:\Projects\SC\SC.WebAPI\bin\Release\SC.WebAPI.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\SC.WebAPI.pdb
+D:\Projects\SC\SC.WebAPI\bin\Release\KM.Common.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\SC.Business.Interface.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\System.Web.Http.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\Microsoft.Practices.Unity.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\log4net.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\System.Net.Http.Formatting.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\Newtonsoft.Json.dll
+D:\Projects\SC\SC.WebAPI\bin\Release\SC.Business.Interface.pdb
+D:\Projects\SC\SC.WebAPI\obj\Release\SC.WebAPI.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.WebAPI\obj\Release\SC.WebAPI.dll
+D:\Projects\SC\SC.WebAPI\obj\Release\SC.WebAPI.pdb

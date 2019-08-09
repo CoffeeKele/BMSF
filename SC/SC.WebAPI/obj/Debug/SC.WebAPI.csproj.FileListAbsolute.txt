@@ -1,0 +1,76 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\SC.WebAPI.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\SC.WebAPI.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\KM.Common.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Http.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\log4net.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.pdb
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.WebAPI.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.WebAPI.pdb
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Entity.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Helpers.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Http.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Mvc.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Razor.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\WebActivatorEx.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Entity.pdb
+D:\Projects\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.pdb
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Helpers.xml
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Mvc.xml
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.Razor.xml
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.xml
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.dll
+D:\Projects\SC\SC.WebAPI\obj\Debug\SC.WebAPI.pdb
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.WebAPI.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.WebAPI.pdb
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.Business.Entity.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Helpers.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Http.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Mvc.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Razor.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Razor.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\WebActivatorEx.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Net.Http.Formatting.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\Newtonsoft.Json.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.Business.Entity.pdb
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\SC.Business.Interface.pdb
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Helpers.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Mvc.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.Razor.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\bin\Debug\System.Web.WebPages.Razor.xml
+E:\BS框架项目\项目1\SC\SC.WebAPI\obj\Debug\SC.WebAPI.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.WebAPI\obj\Debug\SC.WebAPI.dll
+E:\BS框架项目\项目1\SC\SC.WebAPI\obj\Debug\SC.WebAPI.pdb

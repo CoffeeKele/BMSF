@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="l_Group_Menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="MenuID" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_Menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="80" />
+    <Property Name="PID" Type="int" />
+    <Property Name="Href" Type="varchar" MaxLength="80" />
+    <Property Name="Icon" Type="varchar" MaxLength="80" />
+    <Property Name="Note" Type="varchar" MaxLength="500" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="80" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="80" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="States" Type="bit" />
+  </EntityType>
+  <EntityType Name="sys_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="80" />
+    <Property Name="Gender" Type="varchar" MaxLength="80" />
+    <Property Name="Age" Type="varchar" MaxLength="80" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="PassWard" Type="varchar" MaxLength="80" />
+    <Property Name="Email" Type="varchar" MaxLength="120" />
+    <Property Name="Mobile" Type="varchar" MaxLength="80" />
+    <Property Name="Note" Type="varchar" MaxLength="500" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="80" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="80" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="States" Type="bit" />
+  </EntityType>
+  <EntityType Name="sys_User_Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="80" />
+    <Property Name="GroupType" Type="varchar" MaxLength="80" />
+    <Property Name="Note" Type="varchar" MaxLength="500" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="80" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="80" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="States" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="SMDBModelStoreContainer">
+    <EntitySet Name="l_Group_Menu" EntityType="Self.l_Group_Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_Menu" EntityType="Self.sys_Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_User" EntityType="Self.sys_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_User_Group" EntityType="Self.sys_User_Group" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,15 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.dll
+D:\Projects\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.pdb
+D:\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.dll
+D:\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.pdb
+D:\Projects\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.dll
+E:\BS框架项目\项目1\SC\SC.Business.Entity\bin\Debug\SC.Business.Entity.pdb
+E:\BS框架项目\项目1\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.dll
+E:\BS框架项目\项目1\SC\SC.Business.Entity\obj\Debug\SC.Business.Entity.pdb

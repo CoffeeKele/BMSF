@@ -1,0 +1,979 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Batman.MVC</name>
+    </assembly>
+    <members>
+        <member name="T:Batman.MVC.ActionFilters.AutoRefresh">
+            <summary>
+            Auto refreshes the page after a given number of seconds
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.AutoRefresh.Duration">
+            <summary>
+            Duration in seconds
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.AutoRefresh.URL">
+            <summary>
+            URL to refresh
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.AutoRefresh.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            OnActionExecuted
+            </summary>
+            <param name="filterContext">Filter context</param>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.ByPassCRSF">
+            <summary>
+            Bypasses the CRSF protection filter
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.ClientSideCache">
+            <summary>
+            Caches items client side
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.ClientSideCache.DaysToCache">
+            <summary>
+            Days that the item should be cached
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.ClientSideCache.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            Action executing
+            </summary>
+            <param name="filterContext">Filter context</param>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.ClientSideCache.GetETag(System.Web.HttpContextBase)">
+            <summary>
+            Gets the incoming etag
+            </summary>
+            <param name="Context">HTTP context</param>
+            <returns>The string ETag</returns>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.ClientSideCache.GetDateLastModified(System.Web.HttpContextBase)">
+            <summary>
+            Gets the date that file was last modified
+            </summary>
+            <param name="Context">HTTP Context</param>
+            <returns>The date that the file was last modified</returns>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.Compress">
+            <summary>
+            Compresses the data
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.Compress.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.Compress.Minify">
+            <summary>
+            Should this be minified
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.Compress.Type">
+            <summary>
+            Minification type
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.Compress.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            On Action Executing
+            </summary>
+            <param name="filterContext">filter context</param>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.ContentType">
+            <summary>
+            Sets the content type
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.ContentType.Type">
+            <summary>
+            Content type to set for this item
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.ContentType.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="filterContext">filter context</param>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.CSRF">
+            <summary>
+            Automatically sets up a cross site request forgery token
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.CSRF.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            OnAuthorization
+            </summary>
+            <param name="filterContext">filter context</param>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.CSRF.ShouldValidate(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Should the cross site request forgery token be set up?
+            </summary>
+            <param name="Context">Context item</param>
+            <returns>True if it should be set up, false otherwise</returns>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.DoNotCompress">
+            <summary>
+            Bypasses the compression filter
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.RequireSSL">
+            <summary>
+            Require SSL, forcing everything to https unless it's a local call
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.RequireSSL.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="filterContext">filter context</param>
+        </member>
+        <member name="T:Batman.MVC.ActionFilters.ResponseHeader">
+            <summary>
+            Sets the content type
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.ResponseHeader.Name">
+            <summary>
+            HTTP response header item name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.ActionFilters.ResponseHeader.Value">
+            <summary>
+            HTTP response header item value
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.ActionFilters.ResponseHeader.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="filterContext">filter context</param>
+        </member>
+        <member name="T:Batman.MVC.Assets.Asset">
+            <summary>
+            Contains data about an individual asset
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Asset.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Path">Path to the asset</param>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Manager">
+            <summary>
+            Asset manager
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Path">
+            <summary>
+            The path to the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.URL">
+            <summary>
+            URL to the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Type">
+            <summary>
+            Asset type
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Minified">
+            <summary>
+            Is the asset minified
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.LastModified">
+            <summary>
+            Last date/time the asset was modified
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Content">
+            <summary>
+            Content of the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Asset.Included">
+            <summary>
+            Included assets
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Asset.Equals(System.Object)">
+            <summary>
+            Determines if the two objects are equal
+            </summary>
+            <param name="obj">Object to compare to</param>
+            <returns>True if they are the same, false otherwise</returns>
+        </member>
+        <member name="M:Batman.MVC.Assets.Asset.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code for the object</returns>
+        </member>
+        <member name="M:Batman.MVC.Assets.Asset.ToString">
+            <summary>
+            Gets the string version of the asset
+            </summary>
+            <returns>The string version of the asset</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.AssetManager">
+            <summary>
+            Asset manager class
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.ContentFilters">
+            <summary>
+            Content filters
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.FileManager">
+            <summary>
+            File manager
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.FileTypes">
+            <summary>
+            File types that the system recognizes
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.Filters">
+            <summary>
+            Filters
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.RunOrder">
+            <summary>
+            Order that the filters are run in
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.Translators">
+            <summary>
+            Translators
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.CreateBundles">
+            <summary>
+            Auto creates the bundles for the given directory
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.DetermineType(System.String)">
+            <summary>
+            Determines the asset type
+            </summary>
+            <param name="Path">Path to the asset</param>
+            <returns>The asset type</returns>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.Process(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset},System.Web.Optimization.BundleContext,System.Web.Optimization.BundleResponse)">
+            <summary>
+            Processes the assets
+            </summary>
+            <param name="Assets">Assets to process</param>
+            <param name="Context">The bundle context</param>
+            <param name="Response">The bundle response</param>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.CreateBundles(Batman.Core.FileSystem.Interfaces.IDirectory)">
+            <summary>
+            Auto creates the bundles for the given directory
+            </summary>
+            <param name="Directory">Directory to create bundles from</param>
+        </member>
+        <member name="T:Batman.MVC.Assets.AssetManager.VirtualFileHack">
+            <summary>
+            Virtual file hacky system
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.VirtualFileHack.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Batman.MVC.Assets.AssetManager.VirtualFileHack"/> class.
+            </summary>
+            <param name="Location">The location.</param>
+        </member>
+        <member name="P:Batman.MVC.Assets.AssetManager.VirtualFileHack.File">
+            <summary>
+            Gets or sets the file.
+            </summary>
+            <value>The file.</value>
+        </member>
+        <member name="M:Batman.MVC.Assets.AssetManager.VirtualFileHack.Open">
+            <summary>
+            When overridden in a derived class, returns a read-only stream to the virtual resource.
+            </summary>
+            <returns>A read-only stream to the virtual file.</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Filters.CSSFixImagesAndFonts">
+            <summary>
+            Embeds the images and fonts that are linked from the CSS file
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.CSSFixImagesAndFonts.Name">
+            <summary>
+            Filter name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.CSSFixImagesAndFonts.TimeToRun">
+            <summary>
+            Time to run the filter
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Filters.CSSFixImagesAndFonts.ImageRegex">
+            <summary>
+            Used to determine images in the CSS file
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Filters.CSSFixImagesAndFonts.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Filters the assets
+            </summary>
+            <param name="Assets">Assets to filter</param>
+            <returns>The filtered assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Filters.CSSSetupImports">
+            <summary>
+            Goes through and sets up the asset tree for CSS files
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.CSSSetupImports.Name">
+            <summary>
+            Filter name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.CSSSetupImports.TimeToRun">
+            <summary>
+            Time to run the filter
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Filters.CSSSetupImports.FileImportRegex">
+            <summary>
+            Used to determine what files to remove
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Filters.CSSSetupImports.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Filters the assets
+            </summary>
+            <param name="Assets">Assets to filter</param>
+            <returns>The filtered assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Filters.JSSetupImports">
+            <summary>
+            Goes through and sets up the asset tree for JS files
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.JSSetupImports.Name">
+            <summary>
+            Filter name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.JSSetupImports.TimeToRun">
+            <summary>
+            Time to run the filter
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Filters.JSSetupImports.FileImportRegex">
+            <summary>
+            Used to determine what files to remove
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Filters.JSSetupImports.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Filters the assets
+            </summary>
+            <param name="Assets">Assets to filter</param>
+            <returns>The filtered assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Filters.RemoveUselessFiles">
+            <summary>
+            Goes through and removes any file deemed unnecessary
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.RemoveUselessFiles.Name">
+            <summary>
+            Filter name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.RemoveUselessFiles.TimeToRun">
+            <summary>
+            Time to run the filter
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Filters.RemoveUselessFiles.RemoveRegex">
+            <summary>
+            Used to determine what files to remove
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Filters.RemoveUselessFiles.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Filters the assets
+            </summary>
+            <param name="Assets">Assets to filter</param>
+            <returns>The filtered assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Filters.RemoveDuplicates">
+            <summary>
+            Filters a list of assets and returns only a unique set of assets
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.RemoveDuplicates.Name">
+            <summary>
+            Filter name
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Filters.RemoveDuplicates.TimeToRun">
+            <summary>
+            Time to run the filter
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Filters.RemoveDuplicates.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Filters the assets
+            </summary>
+            <param name="Assets">Assets to filter</param>
+            <returns>The filtered assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Interfaces.IContentFilter">
+            <summary>
+            Content filter interface
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IContentFilter.Name">
+            <summary>
+            Name of the filter
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Interfaces.IContentFilter.Filter(System.String)">
+            <summary>
+            Processes the content of the assets once combined
+            </summary>
+            <param name="Content">Content to filter</param>
+            <returns>The processed content</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Interfaces.IAsset">
+            <summary>
+            Asset interface
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.Path">
+            <summary>
+            The path to the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.URL">
+            <summary>
+            URL to the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.Type">
+            <summary>
+            Asset type
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.Minified">
+            <summary>
+            Is the asset minified
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.LastModified">
+            <summary>
+            Last date/time the asset was modified
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.Content">
+            <summary>
+            Content of the asset
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IAsset.Included">
+            <summary>
+            Included assets
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Assets.Interfaces.IFilter">
+            <summary>
+            Filter interface
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IFilter.Name">
+            <summary>
+            Name of the filter
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.IFilter.TimeToRun">
+            <summary>
+            When this filter should be run
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Interfaces.IFilter.Filter(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Processes a list of assets
+            </summary>
+            <param name="Assets">Assets to process</param>
+            <returns>The processed assets</returns>
+        </member>
+        <member name="T:Batman.MVC.Assets.Interfaces.ITranslator">
+            <summary>
+            Translator interface
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.ITranslator.Name">
+            <summary>
+            Name of the translator
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Interfaces.ITranslator.Translate(System.Collections.Generic.IList{Batman.MVC.Assets.Interfaces.IAsset})">
+            <summary>
+            Processes a list of assets
+            </summary>
+            <param name="Assets">Assets to process</param>
+            <returns>The processed assets</returns>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.ITranslator.TranslatesTo">
+            <summary>
+            The asset type that this translates to
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Interfaces.ITranslator.FileTypeAccepts">
+            <summary>
+            File type that the translator accepts
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Assets.Transformers.Transformer">
+            <summary>
+            Transformer class used
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Transformers.Transformer.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Assets.Transformers.Transformer.Manager">
+            <summary>
+            Manager that loads basic asset stuff
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Transformers.Transformer.Process(System.Web.Optimization.BundleContext,System.Web.Optimization.BundleResponse)">
+            <summary>
+            Transforms the content in the <see cref="T:System.Web.Optimization.BundleResponse" /> object.
+            </summary>
+            <param name="context">The bundle context.</param>
+            <param name="response">The bundle response.</param>
+        </member>
+        <member name="T:Batman.MVC.Assets.Enums.AssetType">
+            <summary>
+            Type that the asset should compile down to
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.AssetType.Unknown">
+            <summary>
+            Unknown type
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.AssetType.CSS">
+            <summary>
+            CSS
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.AssetType.Javascript">
+            <summary>
+            Javascript
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.AssetType.HTML">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Assets.Enums.RunTime">
+            <summary>
+            Time that the filter should be run
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.PreTranslate">
+            <summary>
+            Run initially prior to translation
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.PostTranslate">
+            <summary>
+            Run after translation occurs
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.PreMinified">
+            <summary>
+            Run prior to minification
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.Minify">
+            <summary>
+            Minification phase
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.PostMinified">
+            <summary>
+            Run after minification
+            </summary>
+        </member>
+        <member name="F:Batman.MVC.Assets.Enums.RunTime.PreCombine">
+            <summary>
+            Run prior to combining the assets
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Assets.Utils.FileInfoComparer">
+            <summary>
+            Compares two file info objects
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Assets.Utils.FileInfoComparer.Equals(System.IO.FileInfo,System.IO.FileInfo)">
+            <summary>
+            Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type <see cref="T:System.IO.FileInfo">FileInfo</see> to compare.</param>
+            <param name="y">The second object of type <see cref="T:System.IO.FileInfo">FileInfo</see> to compare.</param>
+            <returns>true if the specified objects are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:Batman.MVC.Assets.Utils.FileInfoComparer.GetHashCode(System.IO.FileInfo)">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data
+            structures like a hash table.
+            </returns>
+        </member>
+        <member name="T:Batman.MVC.BaseClasses.APIControllerBase">
+            <summary>
+            API Controller base class
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.APIControllerBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.BaseClasses.ControllerBase">
+            <summary>
+            Controller base class
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.BaseClasses.ControllerBase.Encoding">
+            <summary>
+            Encoding used for the controller (defaults to UTF8)
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.CreateMessage``1">
+            <summary>
+            Creates a message object
+            </summary>
+            <typeparam name="T">Message type</typeparam>
+            <returns>The created message object</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.DirectoryInfo(System.String)">
+            <summary>
+            Gets a directory based on the path entered
+            </summary>
+            <param name="Path">Path to the directory</param>
+            <returns>The directory pointed to by the path</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.FileInfo(System.String)">
+            <summary>
+            Gets a file based on the path entered
+            </summary>
+            <param name="Path">Path to the file</param>
+            <returns>The file pointed to by the path</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.Initialize(System.Web.Routing.RequestContext)">
+            <summary>
+            Initializes the controller
+            </summary>
+            <param name="requestContext">Request context</param>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.Log(System.String,Utilities.IO.Logging.Enums.MessageType,System.Object[])">
+            <summary>
+            Logs a message to the Batman log file
+            </summary>
+            <param name="Message">Message to log</param>
+            <param name="Type">Message level/type</param>
+            <param name="args">Extra args used to format the message</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.Serialize``1(``0,System.String)">
+            <summary>
+            Serializes the object into an action result
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to serialize</param>
+            <param name="ContentType">Content type to serialize it as</param>
+            <returns>Action result</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.Serialize``1(``0)">
+            <summary>
+            Serializes the object into an action result based on the content type requested by the user (defaults to json)
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to serialize</param>
+            <returns>Action result</returns>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.ControllerBase.StartProfiling(System.String)">
+            <summary>
+            Starts profiling the section starting with this call and stopping when the profiler is disposed of
+            </summary>
+            <param name="Name">Name of the section to profile</param>
+            <returns>The profiler object</returns>
+        </member>
+        <member name="T:Batman.MVC.BaseClasses.HttpApplicationBase">
+            <summary>
+            HttpApplication base class that auto attaches a couple items (profiler, etc)
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.HttpApplicationBase.Application_AuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            Handles the AuthenticateRequest event of the Application control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.HttpApplicationBase.Application_BeginRequest">
+            <summary>
+            Called at the beginning of the application request
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.HttpApplicationBase.Application_EndRequest">
+            <summary>
+            Called at the end of the application request
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.HttpApplicationBase.Application_Error">
+            <summary>
+            Called when the application has an error
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.HttpApplicationBase.UserCanProfile">
+            <summary>
+            Determines if the user can see profiling data
+            </summary>
+            <returns>True if they can see profiling data, false otherwise</returns>
+        </member>
+        <member name="T:Batman.MVC.BaseClasses.PageControllerBase">
+            <summary>
+            Page base class
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.BaseClasses.PageControllerBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Bootstrapper.AssetModule">
+            <summary>
+            Module for registering the asset module
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Bootstrapper.AssetModule.Load(Batman.Core.Bootstrapper.Interfaces.IBootstrapper)">
+            <summary>
+            Loads the module using the bootstrapper
+            </summary>
+            <param name="Bootstrapper">Bootstrapper used to register various objects</param>
+        </member>
+        <member name="T:Batman.MVC.Tasks.AssetBundlerTask">
+            <summary>
+            Asset bundler task
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Tasks.AssetBundlerTask.TimeToRun">
+            <summary>
+            Time to run
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Tasks.AssetBundlerTask.Name">
+            <summary>
+            Name of the task
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Tasks.AssetBundlerTask.Run">
+            <summary>
+            Runs the task
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.Tasks.ValueProviderTask">
+            <summary>
+            Value provider task
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Tasks.ValueProviderTask.TimeToRun">
+            <summary>
+            Time to run the task
+            </summary>
+        </member>
+        <member name="P:Batman.MVC.Tasks.ValueProviderTask.Name">
+            <summary>
+            Name of the task
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.Tasks.ValueProviderTask.Run">
+            <summary>
+            Runs the task
+            </summary>
+        </member>
+        <member name="T:Batman.MVC.VPFactories.BaseClasses.VPFactoryBase">
+            <summary>
+            Value provider factory base class
+            </summary>
+        </member>
+        <member name="M:Batman.MVC.VPFactories.BaseClasses.VPFactoryBase.AddFactory">
+            <summary>
+            Called when starting up to replace/add the factory to the system
+            </summary>
+        </member>
+        <member name="T:Batman.Core.Bootstrapper.DependencyResolver">
+            <summary>
+            Dependency resolver base class
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.DependencyResolver.#ctor(Batman.Core.Bootstrapper.Interfaces.IBootstrapper)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Bootstrapper.DependencyResolver.Container">
+            <summary>
+            The IoC container
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.DependencyResolver.GetService(System.Type)">
+            <summary>
+            Gets the service based on the type specified
+            </summary>
+            <param name="serviceType">Service type</param>
+            <returns>The object associated with the type</returns>
+        </member>
+        <member name="M:Batman.Core.Bootstrapper.DependencyResolver.GetServices(System.Type)">
+            <summary>
+            Gets the services based on the type specified
+            </summary>
+            <param name="serviceType">Service type</param>
+            <returns>The objects associated with the type</returns>
+        </member>
+        <member name="T:Batman.Core.Serialization.Interfaces.ISerializer">
+            <summary>
+            Serializer interface
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Serialization.Interfaces.ISerializer.ContentType">
+            <summary>
+            Content type associated with this serializer
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Serialization.Interfaces.ISerializer.FileType">
+            <summary>
+            File ending associated with the serializer
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Serialization.Interfaces.ISerializer.Name">
+            <summary>
+            Name of the serializer
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Serialization.Interfaces.ISerializer.Serialize(System.Type,System.Object)">
+            <summary>
+            Serializes the data to a string
+            </summary>
+            <param name="Data">Data to serialize</param>
+            <param name="ObjectType">Type of the data</param>
+            <returns>The serialized data</returns>
+        </member>
+        <member name="M:Batman.Core.Serialization.Interfaces.ISerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the data to a string
+            </summary>
+            <typeparam name="T">Type of the data to serialize</typeparam>
+            <param name="Data">Data to serialize</param>
+            <returns>The serialized data</returns>
+        </member>
+        <member name="T:Batman.Core.Serialization.SerializationManager">
+            <summary>
+            Manager in charge of serializing data
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Serialization.SerializationManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Batman.Core.Serialization.SerializationManager.Serializers">
+            <summary>
+            Serializers
+            </summary>
+        </member>
+        <member name="M:Batman.Core.Serialization.SerializationManager.Serialize``1(``0,System.String)">
+            <summary>
+            Serializes the object based on the content type specified
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="Object">Object to serialize</param>
+            <param name="ContentType">Content type</param>
+            <returns>The serialized object as a string</returns>
+        </member>
+        <member name="M:Batman.Core.Serialization.SerializationManager.Serialize(System.Object,System.Type,System.String)">
+            <summary>
+            Serializes the object based on the content type specified
+            </summary>
+            <param name="ObjectType">Object type</param>
+            <param name="Object">Object to serialize</param>
+            <param name="ContentType">Content type</param>
+            <returns>The serialized object as a string</returns>
+        </member>
+        <member name="M:Batman.Core.Serialization.SerializationManager.ToString">
+            <summary>
+            Outputs information about the serializers the system is using
+            </summary>
+            <returns>String version of the object</returns>
+        </member>
+        <member name="T:Batman.Core.AppHelper">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Batman.Core.AppHelper.End">
+            <summary>
+            Ends this instance.
+            </summary>
+        </member>
+        <member name="M:Batman.Core.AppHelper.PostStart">
+            <summary>
+            Called post application start
+            </summary>
+        </member>
+        <member name="M:Batman.Core.AppHelper.PreStart">
+            <summary>
+            Called pre application start
+            </summary>
+        </member>
+    </members>
+</doc>

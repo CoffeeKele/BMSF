@@ -1,0 +1,4 @@
+D:\Projects\SC\SC.Business.Entity\bin\Release\SC.Business.Entity.dll
+D:\Projects\SC\SC.Business.Entity\bin\Release\SC.Business.Entity.pdb
+D:\Projects\SC\SC.Business.Entity\obj\Release\SC.Business.Entity.dll
+D:\Projects\SC\SC.Business.Entity\obj\Release\SC.Business.Entity.pdb

@@ -1,0 +1,19 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.pdb
+D:\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.dll
+D:\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.pdb
+D:\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Entity.dll
+D:\Projects\SC\SC.Business.Interface\bin\Debug\SC.Business.Entity.pdb
+D:\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.csprojResolveAssemblyReference.cache
+D:\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.dll
+D:\Projects\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.pdb
+E:\BS框架项目\项目1\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.dll
+E:\BS框架项目\项目1\SC\SC.Business.Interface\bin\Debug\SC.Business.Interface.pdb
+E:\BS框架项目\项目1\SC\SC.Business.Interface\bin\Debug\SC.Business.Entity.dll
+E:\BS框架项目\项目1\SC\SC.Business.Interface\bin\Debug\SC.Business.Entity.pdb
+E:\BS框架项目\项目1\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.csprojResolveAssemblyReference.cache
+E:\BS框架项目\项目1\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.dll
+E:\BS框架项目\项目1\SC\SC.Business.Interface\obj\Debug\SC.Business.Interface.pdb
